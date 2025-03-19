@@ -25,7 +25,7 @@ export default function Entry(props: EntryProps) {
         {createIfExists(<p>{description}</p>, description)}
         {createIfExists(
             <ul className="ml-4 list-disc">
-                {children?.map( (child, index) => <li id={`${title}-${index}`}>{child}</li>)}
+                {children?.map( (child, index) => <li key={`${title}-${index}`}>{child}</li>)}
             </ul>,
             children
         )}

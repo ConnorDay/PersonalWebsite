@@ -3,7 +3,10 @@ import Header from "./header/header";
 import Section from "./section/section";
 
 export default function Resume(){
-    return <div className="flex flex-col items-center py-8">
+    return <div className="flex flex-col items-center">
+        <div className="flex w-204 justify-end py-4">
+            <a className="border-platinum border-solid border-2 px-4 py-2" href="/download/resume" download={"Connor_Day.pdf"}>Download</a>
+        </div>
         <div className="w-204 text-sm flex flex-col gap-2 border-platinum border-solid border-2 p-8">
             <Header/>
             <Section title="skills">

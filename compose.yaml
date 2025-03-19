@@ -8,3 +8,10 @@ services:
         - action: sync
           path: .
           target: /app
+  nginx:
+    image: nginx:latest
+    ports: 
+      - 3000:80
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - ./downloads/:/var/www/html/downloads/

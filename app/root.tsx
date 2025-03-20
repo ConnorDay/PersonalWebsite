@@ -43,7 +43,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <><Toolbar /><Outlet /></>;
+  return <div className="flex flex-col max-h-screen">
+        <Toolbar />
+        <main className="block overflow-auto">
+            <Outlet />
+        </main>
+    </div>;
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

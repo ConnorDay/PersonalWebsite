@@ -10,6 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import Toolbar from "./components/toolbar";
+import Footer from "./components/footer/footer";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -43,11 +44,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <div className="flex flex-col max-h-screen">
+  return <div className="flex flex-col h-screen">
         <Toolbar />
-        <main className="block overflow-auto">
+        <main className="block overflow-auto flex-1">
             <Outlet />
         </main>
+        <Footer />
     </div>;
 }
 

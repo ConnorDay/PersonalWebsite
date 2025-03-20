@@ -1,12 +1,14 @@
 import Entry from "./entry/entry";
 import Header from "./header/header";
 import Section from "./section/section";
+import download from "./download.svg";
 
 export default function Resume(){
-    return <div className="flex flex-col items-center">
-        <div className="flex w-204 justify-end py-4">
-            <a className="border-platinum border-solid border-2 px-4 py-2" href="/download/resume" download={"Connor_Day.pdf"}>Download</a>
-        </div>
+    return <div className="flex flex-col items-center py-12">
+        <a className="border-platinum border-solid border-2 pr-4 pl-2 py-2 flex gap-2 absolute right-" href="/download/resume" download={"Connor_Day.pdf"}>
+            <img src={download} />
+            Download
+        </a>
         <div className="w-204 text-sm flex flex-col gap-2 border-platinum border-solid border-2 p-8">
             <Header/>
             <Section title="skills">
